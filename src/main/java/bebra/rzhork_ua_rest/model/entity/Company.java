@@ -11,6 +11,10 @@ import java.util.UUID;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@NamedQuery(
+        name = "Company.findFilteredCompanies",
+        query = "SELECT c FROM Company c WHERE c.title LIKE :search OR c.location LIKE :search"
+)
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

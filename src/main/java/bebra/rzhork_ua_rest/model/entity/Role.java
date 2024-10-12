@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter @Setter @NoArgsConstructor
 public class Role implements GrantedAuthority {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     private String name;
